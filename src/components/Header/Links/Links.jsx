@@ -11,7 +11,7 @@ export default function Links() {
                    <div className='py-3 cursor-pointer'>
                    <SVG className='size-[34px]' name='shopping-Cart'></SVG>
                    </div>
-                  <CartModal/>
+                   <CartModal></CartModal>
                 </div>
 
                 <div  className='cursor-pointer' id='toggle-theme'>
