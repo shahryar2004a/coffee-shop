@@ -15,7 +15,7 @@ export default function Links() {
     };
   return (
     <>
-      <div className='flex gap-x-10 text-orange-200 text-xl'>
+      <div className='flex gap-x-5 xl:gap-x-10 text-orange-200 text-xl'>
             <div className='flex items-center gap-x-5'>
                 <div className='relative group'>
                    <div className='py-3 cursor-pointer'>
@@ -31,7 +31,7 @@ export default function Links() {
             <span className='w-px h-14 bg-white/20'></span>
             <a href="" className='flex items-center gap-x-2.5 tracking-tightest'>
             <SVG className='size-[34px]' name='arrow'></SVG>
-            <span>ورود | ثبت نام</span>
+            <span className=' hidden xl:inline-block'>ورود | ثبت نام</span>
             </a>
             
         </div>
