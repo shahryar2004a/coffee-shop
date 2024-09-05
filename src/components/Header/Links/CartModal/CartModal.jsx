@@ -5,7 +5,7 @@ import ProductCartModal from './ProductCartModal/ProductCartModal'
 export default function CartModal() {
   return (
     <>
-      <div className='absolute top-full left-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible w-[400px] p-5
+      <div className='absolute top-full left-0 opacity-0 invisible  group-hover:opacity-100 group-hover:visible w-[400px] p-5
                    bg-white dark:bg-zinc-700 border-t-[3px] border-t-orange-300
                    shadow-normal rounded-2xl transition-all delay-75'>
 
@@ -17,7 +17,14 @@ export default function CartModal() {
                          </a>
                     </div>
                     {/*body card */}
+                    <div className='max-h-96 overflow-auto '>
                     <ProductCartModal/>
+                    <ProductCartModal/>
+                    <ProductCartModal/>
+                    <ProductCartModal/>
+
+                    </div>
+                
                     <div className='flex justify-between mt-5'>
                         <div>
                           <span className='font-YekanMedium text-gray-300 text-xs tracking-normal'>مبلغ قابل پرداخت</span>
