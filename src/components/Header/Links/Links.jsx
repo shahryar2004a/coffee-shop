@@ -1,8 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import SVG from '../../SVG/SVG'
 import CartModal from './CartModal/CartModal'
+import useDarkSide from '../../Hook/useDarkside'
+import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 export default function Links() {
+
+    const [colorTheme, setTheme] = useDarkSide();
+    const [darkSide, setDarkSide] = useState(colorTheme === 'light' ? true : false);
+  
+    const toggleDarkMode = checked => {
+      setTheme(colorTheme);
+      setDarkSide(checked);
+    };
   return (
     <>
       <div className='flex gap-x-10 text-orange-200 text-xl'>
@@ -15,8 +25,7 @@ export default function Links() {
                 </div>
 
                 <div  className='cursor-pointer' id='toggle-theme'>
-                <SVG className=' inline-block dark:hidden size-[34px]' name='moon'></SVG>
-                <SVG className='hidden  dark:inline-block size-[34px]' name='sun'></SVG>
+                <DarkModeSwitch className='text-orange-200 size-[34px]' checked={darkSide} onChange={toggleDarkMode}/>
                 </div>
             </div>
             <span className='w-px h-14 bg-white/20'></span>
