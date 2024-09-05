@@ -15,8 +15,8 @@ export default function Links() {
     };
   return (
     <>
-      <div className='flex gap-x-5 xl:gap-x-10 text-orange-200 text-xl'>
-            <div className='flex items-center gap-x-5'>
+      <div className='flex gap-x-4 lg:gap-x-5 xl:gap-x-10 text-orange-200 text-xl'>
+            <div className='flex items-center gap-x-4 lg:gap-x-5'>
                 <div className='relative group'>
                    <div className='py-3 cursor-pointer'>
                    <SVG className='size-[34px]' name='shopping-Cart'></SVG>
