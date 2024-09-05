@@ -4,15 +4,15 @@ import SubMenu from './SubMenu/SubMenu'
 export default function Nav() {
   return (
     <>
-         <nav className='flex items-center gap-x-9 h-14'>
-            <div>
+         <nav className='flex items-center gap-x-5 lg:gap-x-9 h-14'>
+            <div className=' shrink-0'>
                 <img
                  src="../../images/app-logo.png"
                   alt="Golden Coffee"
                  
                   />
             </div>
-            <ul className='flex gap-x-9 h-full text-xl text-gray-300 tracking-tightest child:leading-[56px]'>
+            <ul className='flex gap-x-5 lg:gap-x-9 h-full text-xl text-gray-300 tracking-tightest child:leading-[56px]'>
                 <li className='font-YekanMedium text-orange-200'>
                     <a href="#">صفحه اصلی</a>
                 </li>
