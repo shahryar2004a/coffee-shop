@@ -31,7 +31,7 @@ export default function NavMobile({show}) {
   return (
     <>
       
-       <div ref={menuMobilRef} className=' font-YekanMedium fixed top-0 bottom-0 -right-64 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20 transition-all'>
+       <div ref={menuMobilRef} className='  fixed top-0 bottom-0 -right-64 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20 overflow-y-auto transition-all font-YekanMedium'>
          <div className='flex items-center justify-between pb-5 mb-6 border-b-gray-100 dark:border-b-white/10'>
           <div className='flex gap-x-3.5'>
           <SVG className='w-[41px] h-10 text-orange-300' name='logo'></SVG>
@@ -44,7 +44,7 @@ export default function NavMobile({show}) {
 
          <MenuNavMobile/>
 
-         <div className='flex flex-col items-start gap-y-6 pt-8 px-2.5 mt-8 text-orange-300 border-t-gray-100 dark:border-t-white/10'>
+         <div className='flex flex-col items-start gap-y-6 py-8 px-2.5 mt-8 text-orange-300 border-t-gray-100 dark:border-t-white/10'>
            <a href="#" className='inline-flex items-center gap-x-2'>
            <SVG className='size-5' name='arrow'></SVG>
             ورود | ثبت نام
