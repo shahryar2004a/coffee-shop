@@ -16,7 +16,7 @@ export default function Header() {
        </div>
      </header>
      {/* header for mobile*/}
-     <div className='flex md:hidden items-center justify-between h-16 px-4 bg-white dark:bg-zinc-700 '>
+     <div className='flex md:block items-center justify-between h-16 px-4 bg-white dark:bg-zinc-700 '>
            
         
              <SVG className='w-6 h-6 text-zinc-700 dark:text-white' name='bars'></SVG>
