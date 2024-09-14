@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import SVG from '../../../SVG/SVG'
 import useDarkSide from '../../../Hook/useDarkside'
 import { DarkModeSwitch } from 'react-toggle-dark-mode'
+import MenuNavMobile from './MenuNavMobile/MenuNavMobile'
 
 export default function NavMobile() {
   const [colorTheme, setTheme] = useDarkSide();
@@ -22,6 +23,8 @@ export default function NavMobile() {
           </div>
           <SVG className='w-5 h-5 text-zinc-600 dark:text-white' name='x-mark'></SVG>
          </div>
+
+         <MenuNavMobile/>
 
          <div className='flex flex-col items-start gap-y-6 pt-8 px-2.5 mt-8 text-orange-300 border-t-gray-100 dark:border-t-white/10'>
            <a href="#" className='inline-flex items-center gap-x-2'>
