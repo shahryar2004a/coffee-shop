@@ -3,13 +3,20 @@ import Nav from './Nav/Nav'
 import Links from './Links/Links'
 import SVG from '../SVG/SVG'
 import NavMobile from './Nav/NavMobile/NavMobile'
+import CartModalMobile from './Links/CartModal/CartModalMobile'
 
 export default function Header() {
 
    const [showMenu,setShowMenu]=useState(false)
+  const  [showModalCart,setShowModalCart] = useState(false)
 
    const openNavMobile=()=>{
         setShowMenu(!showMenu)
+        setShowModalCart(false)
+   }
+   const openModalCart=()=>{ 
+      setShowModalCart(!showModalCart)
+     setShowMenu(false)
    }
   return (
     <>
@@ -29,13 +36,17 @@ export default function Header() {
             </div>
             
               <NavMobile show={showMenu}/>
-
+           
             <SVG className='w-[100px] h-10 text-orange-300' name='logo-type'></SVG>
            
+            <div onClick={()=> openModalCart()}>
+            <SVG className='w-6 h-6 text-zinc-700 dark:text-white' name='shopping-Cart'></SVG>
+             </div>
           
-           <SVG className='w-6 h-6 text-zinc-700 dark:text-white' name='shopping-Cart'></SVG>
-           
-          
+
+           {/* cart modal mobile */}
+              {/*cart */}
+             <CartModalMobile showModal={showModalCart}/>
      </div>
     </>
   )
