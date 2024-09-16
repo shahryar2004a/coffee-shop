@@ -1,6 +1,7 @@
 import React from 'react'
 import SVG from '../../../SVG/SVG'
 import ProductCartModal from './ProductCartModal/ProductCartModal'
+import Images from '../../../Images/Images'
 
 export default function CartModal() {
   return (
@@ -18,10 +19,10 @@ export default function CartModal() {
                     </div>
                     {/*body card */}
                     <div className='max-h-96 overflow-auto '>
-                    <ProductCartModal/>
-                    <ProductCartModal/>
-                    <ProductCartModal/>
-                    <ProductCartModal/>
+                    <ProductCartModal pic={Images.p1}/>
+                    <ProductCartModal pic={Images.p2}/>
+                    <ProductCartModal pic={Images.p3}/>
+                    <ProductCartModal pic={Images.p4}/>
 
                     </div>
                 

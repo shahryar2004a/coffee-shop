@@ -1,5 +1,7 @@
 import React,{useRef} from 'react'
 import SVG from '../../../SVG/SVG'
+import ProductCartModal from './ProductCartModal/ProductCartModal'
+import Images from '../../../Images/Images'
 
 export default function CartModalMobile({showModal}) {
   
@@ -35,38 +37,9 @@ export default function CartModalMobile({showModal}) {
                     {/* Cart Body */}
                      <div className='child:pb-5 child:mb-5 min-h-80 overflow-y-auto '>
                                   
-                     <div className='flex gap-x-1 border-b border-b-gray-100 dark:border-b-white/10'>
-                        <img src="/public/images/products/p1.png" className='w-[90px] h-[90px]' alt="Product 1" />
-                        <div className='flex flex-col justify-between gap-y-1.5'>
-                        <h4 className='font-YekanMedium text-zinc-700 dark:text-white text-sm line-clamp-2'>
-                         قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
-                        </h4>
-                        <div>
-                          <span className=' text-teal-600 dark:text-emerald-500 font-YekanMedium text-xs tracking-tighter'>14.500 تومان تخفیف</span>
-                          <div className='text-zinc-700  dark:text-white font-YekanMedium'>
-                            175.000
-                            <span className=' font-Yekan'>تومان</span>
-                          </div>
-                        </div>
-                        </div>
-                      </div>
-
-                      <div className='flex gap-x-1 border-b border-b-gray-100 dark:border-b-white/10'>
-                        <img src="/public/images/products/p1.png" className='w-[90px] h-[90px]' alt="Product 1" />
-                        <div className='flex flex-col justify-between gap-y-1.5'>
-                        <h4 className='font-YekanMedium text-zinc-700 dark:text-white text-sm line-clamp-2'>
-                         قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
-                        </h4>
-                        <div>
-                          <span className=' text-teal-600 dark:text-emerald-500 font-YekanMedium text-xs tracking-tighter'>14.500 تومان تخفیف</span>
-                          <div className='text-zinc-700  dark:text-white font-YekanMedium'>
-                            175.000
-                            <span className=' font-Yekan'>تومان</span>
-                          </div>
-                        </div>
-                        </div>
-                      </div>
-          
+                          <ProductCartModal pic={Images.p1}/>
+                          <ProductCartModal pic={Images.p2}/>
+                          <ProductCartModal pic={Images.p3}/>
           
                      </div>
                   {/* Cart Footer */}
