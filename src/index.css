@@ -24,15 +24,7 @@
         src:local("Yekan Regular") , url("../public/fonts/BYekan.ttf");
         font-display: swap;
     }
-   body{
-     @apply font-YekanRegular bg-gray-100 dark:bg-zinc-800;
-     background-image: url("../public/images/headerBgDesktop.webp");
-     background-repeat: no-repeat;
-     background-size: cover;
-     background-position: top;
-     background-clip: border-box;
-     
-   }
+
 }
 
 @layer components {
