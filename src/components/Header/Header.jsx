@@ -90,6 +90,9 @@ export default function Header() {
               </a>
             </div>
           </section>
+          <section className='products'>
+
+          </section>
          </main>
     </>
   )
