@@ -85,12 +85,12 @@ export default function Header() {
 
            {/* Arrow Circle */}
             <div className=' absolute bottom-0 right-0 left-0 mx-auto translate-y-2/4 hidden md:flex justify-center items-center w-[30px] h-[30px] border-2 border-orange-300 rounded-full'>
-              <a href='#'>
+              <a href='#product-section'>
               <SVG  className='w-5 h-5 text-zinc-700 dark:text-white' name='chevron-down-mini'/>
               </a>
             </div>
           </section>
-          <section className='products'>
+          <section className='products' id='product-section'>
 
           </section>
          </main>
