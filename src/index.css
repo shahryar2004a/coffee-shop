@@ -94,4 +94,20 @@
        height: 900px;
       
    }
+   .banner-item{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 200px;
+      border-radius: 15px;
+         
+   }
+   
+   .right{
+      background-image: url('../public/images/categories/category-right.jpg');
+
+   }
+   .left{
+      background-image: url('../public/images/categories/category-left.jpg');
+
+   }
  }

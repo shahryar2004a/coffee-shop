@@ -96,7 +96,7 @@ export default function Header() {
           </section>
           <section className='products ' id='product-section'>
             
-            <div className='container xl:px-40 pt-16 xl:pt-36'>
+            <div className='container  pt-16 xl:pt-36'>
             <div className='products-header flex justify-between'>
              <div className='title text-zinc-700  dark:text-white'>
                 <h1 className='font-YekanHeavy text-2xl sm:text-3xl xl:text-4xl'>جدیدترین محصولات</h1>
@@ -125,6 +125,29 @@ export default function Header() {
             </div>
 
           </section>
+             
+            <section className='category-banner mt-30 '>
+              <div className='container flex justify-center gap-4'>
+
+                <div className='banner-item right relative w-[100%] xl:w-[50%]'>
+                  <div className=' absolute text-white right-10 top-[40%]'>
+                  <h1 className='font-YekanHeavy text-3xl'>انواع قهوه</h1>
+                  <p>ترکیبی و تک خاستگاه</p>
+                  </div>
+               </div>
+               <div className='banner-item left relative w-[100%] xl:w-[50%]'>
+                <div className=' absolute text-white right-10 top-[40%]'>
+                <h1 className='font-YekanHeavy text-3xl'>پودر های فوری</h1>
+                <p>نسکافه،هات چاکلت و ماسالا</p>
+
+                </div>
+                </div>
+              </div>
+             
+            
+      
+            </section>
+
          </main>
     </>
   )
