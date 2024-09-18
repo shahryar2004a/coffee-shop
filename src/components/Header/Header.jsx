@@ -4,6 +4,8 @@ import Links from './Links/Links'
 import SVG from '../SVG/SVG'
 import NavMobile from './Nav/NavMobile/NavMobile'
 import CartModalMobile from './Links/CartModal/CartModalMobile'
+import Product from './Product/Product'
+
 
 export default function Header() {
 
@@ -29,6 +31,8 @@ export default function Header() {
          <Links/>
        </div>
      </header>
+
+
      {/* header for mobile*/}
      <div className='flex md:hidden items-center justify-between h-16 px-4 bg-white dark:bg-zinc-700 '>
            
@@ -90,7 +94,35 @@ export default function Header() {
               </a>
             </div>
           </section>
-          <section className='products' id='product-section'>
+          <section className='products ' id='product-section'>
+            
+            <div className='container xl:px-40 pt-16 xl:pt-36'>
+            <div className='products-header flex justify-between'>
+             <div className='title text-zinc-700  dark:text-white'>
+                <h1 className='font-YekanHeavy text-2xl sm:text-3xl xl:text-4xl'>جدیدترین محصولات</h1>
+                <p className='font-YekanMedium text-xs sm:text-[15px]'>فراوری شده از دانه ی قهوه</p>
+             </div>
+             <div className='other flex items-end'>
+                 <div className='flex justify-end text-orange-300'>
+                  <a href="#" className='flex items-center'>
+                    <span className='text-xs sm:text-[15px]'>مشاهده همه محصولات</span>
+                    <SVG className='size-3 sm:size-4  xl:size-5' name='arrow-left-mini'/>
+                  </a>
+                 </div>
+             </div>
+           </div>   
+           <div className='product-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-4 gap-4 mt-12 '>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+              <Product/>
+
+           </div>
+            </div>
 
           </section>
          </main>
