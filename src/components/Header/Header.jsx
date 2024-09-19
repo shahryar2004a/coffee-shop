@@ -266,7 +266,68 @@ export default function Header() {
           </div>
          </section>
 
+          
+          <section className='coffee-club mb-8 md:mb-20'>
+            <div className='container'>
+            <div className='flex items-center flex-wrap lg:flex-nowrap   gap-y-7 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white py-5 px-3 lg:py-16  lg:h-36 rounded-2xl'>
+              <div className='flex items-center gap-x-3 md:gap-x-6'>
+               <img src={Images.diamond} className='w-[87px] md:w-[110px]' alt="Coffee club" />
+              <div>
+                <h4 className='font-YekanHeavy text-3xl md:text-5xl mb-2'>کافی کلاب</h4>
+                <p className='font-Yekan text-lg md:text-xl'>میدونستی میتونی با امتیازهات قهوه بگیری؟</p>
+              </div>
+              </div>
 
+
+              <div className='flex justify-center sm:justify-between flex-wrap sm:flex-nowrap gap-y-4 gap-x-4 sm:gap-x-0 sm:mr-30 items-center sm:w-[100%] lg:w-[50%] '>
+
+
+                <div className='flex gap-x-8  md:gap-x-5  md:w-[50%] lg:w-[60%]'>
+
+
+                   <div className="w-[80px] h-[80px] sm:w-[72px] sm:h-[72px] md:w-[98px] md:h-[98px] text-center text-emerald-600 bg-white py-1.5 md:pt-4 md:pb-1 rounded-2xl"> 
+                    <div className='w-10 h-10 md:w-12 md:h-12 mb-1 md:mb-1.5 mx-auto'>
+                    <SVG className='w-10 h-10 md:w-12 md:h-12 mb-1 md:mb-1.5 mx-auto' name='activity'/>  
+                    </div>
+                  <span className='text-xs md:text-sm'>چرخ و بخت</span>
+                   </div>
+
+
+
+                   <div className="w-[80px] h-[80px] sm:w-[72px] sm:h-[72px] md:w-[98px] md:h-[98px] text-center text-emerald-600 bg-white py-1.5 md:pt-4 md:pb-1 rounded-2xl">
+                 
+                    <SVG className='w-10 h-10 md:w-12 md:h-12 mb-1 md:mb-1.5 mx-auto' name='discovery'/>  
+                       
+                  <span className='text-xs md:text-sm'>ماموریت</span>
+                   </div>
+
+
+                   <div className="w-[80px] h-[80px] sm:w-[72px] sm:h-[72px] md:w-[98px] md:h-[98px] text-center text-emerald-600 bg-white py-1.5 md:pt-4 md:pb-1 rounded-2xl">
+                    <div className='w-10 h-10 md:w-12 md:h-12 mb-1 md:mb-1.5 mx-auto'>
+                    <SVG className='w-10 h-10 md:w-12 md:h-12 mb-1 md:mb-1.5 mx-auto' name='ticket-star'/>  
+                    </div>   
+                  <span  className='text-xs md:text-sm'>جایزه ها</span>
+                   </div>
+
+
+                </div>
+                  
+                  <div className='flex flex-col items-center sm:mr-14 sm:mr-30 justify-center gap-1'>
+                    <h1 className='font-YekanHeavy text-3xl lg:text-4xl'>542</h1>
+                    <span className='font-Yekan'>امتیاز شما</span>
+                    <div className='bg-[#ffc077] flex items-center gap-x-2 rounded-xl p-1.5 cursor-pointer hover:bg-white hover:text-[#ffc077] transition-all'>
+                      <span className='font-Yekan'>دریافت جایزه</span> 
+                       <SVG className='w-4 h-4' name='chevron-left'/>
+                    </div>
+                  </div>
+           
+                <div>
+
+                </div>
+              </div>
+            </div>
+            </div>
+          </section>
 
 
          </main>

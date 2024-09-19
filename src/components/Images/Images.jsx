@@ -18,9 +18,12 @@ import category4 from '../Images/categories/category4.png'
 import category5 from '../Images/categories/category5.png'
 
 
+// Coffee club 
 
+import diamond from '../Images/club/diamond.png'
 
 
 export default {p1, p2, p3, p4, p5, p6, p7, p8,
     category1,category2,category3,category4,category5,
+    diamond,
 }
