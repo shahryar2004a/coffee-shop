@@ -6,6 +6,9 @@ import NavMobile from './Nav/NavMobile/NavMobile'
 import CartModalMobile from './Links/CartModal/CartModalMobile'
 import Product from './Product/Product'
 import Images from '../Images/Images'
+import data from '../Data/productData'
+
+
 
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -24,7 +27,8 @@ export default function Header() {
 
    const [showMenu,setShowMenu]=useState(false)
   const  [showModalCart,setShowModalCart] = useState(false)
-     
+     const [productData,setproductData]=useState(data)
+
    /* slider swiper */
     const swiperRef=useRef(null)
     
@@ -78,16 +82,8 @@ export default function Header() {
             <SVG className='w-6 h-6 text-zinc-700 dark:text-white' name='shopping-Cart'></SVG>
              </div>
           
-
            {/* cart modal mobile */}
-              {/*cart */}
              <CartModalMobile showModal={showModalCart}/>
- 
-
-             
-               
-
-
      </div>
 
            {/* App Main */}
@@ -124,6 +120,10 @@ export default function Header() {
               </a>
             </div>
           </section>
+
+
+
+           {/* Products */}
           <section className='products ' id='product-section'>
             
             <div className='container  pt-16 xl:pt-36'>
@@ -144,20 +144,33 @@ export default function Header() {
            </div>   
               {/* product section Body */}
            <div className='product-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-4 gap-4 mt-12 '>
-              <Product/>
-              <Product/>
-              <Product/>
-              <Product/>
-              <Product/>
-              <Product/>
-              <Product/>
-              <Product/>
-
+               {
+                !productData ? (<div>Loading...</div>) :(
+                 productData.map((product)=> <Product key={product.id}  product={product}/>
+                ) )
+               }
            </div>
             </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           </section>
-             
+
+
+          
+           {/* category-banner */}
             <section className='category-banner mt-8 mb-10 md:my-20 '>
               <div className='container flex justify-center gap-4'>
 
@@ -180,8 +193,8 @@ export default function Header() {
       
             </section>
  
-
-        <section className='products-category mb-10 md:mb-20'>
+           {/* products-category */}
+           <section className='products-category mb-10 md:mb-20'>
          <div className='container'>
           <div className='flex items-center justify-center gap-y-6 gap-x-[20px] md:gap-[60px] flex-wrap'>
 
@@ -288,22 +301,22 @@ export default function Header() {
     }
     >
       <SwiperSlide>
-        <Product/>
+
       </SwiperSlide>
       <SwiperSlide>
-      <Product/>
+
       </SwiperSlide>
       <SwiperSlide>
-      <Product/>
+
       </SwiperSlide>
       <SwiperSlide>
-      <Product/>
+
       </SwiperSlide>
       <SwiperSlide>
-      <Product/>
+
       </SwiperSlide>
       <SwiperSlide>
-      <Product/>
+
       </SwiperSlide>
     </Swiper>
           </div>
