@@ -102,6 +102,17 @@
          
    }
  }
+
+ .banner-item_1{
+   background: linear-gradient(270deg,rgba(0,0,0,0.6) 33.85%,rgba(243,244,246,0.1) 100%),url("../public/images/categories/category-right.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+.banner-item_2{
+   background: linear-gradient(270deg,rgba(0,0,0,0.6) 33.85%,rgba(243,244,246,0.1) 100%),url("../public/images/categories/category-left.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
  .right{
       background-image: url('../public/images/categories/category-right.jpg');
 
@@ -115,4 +126,10 @@
 .swiper-btn{
    @apply  flex justify-center items-center w-9 h-9 md:w-10 md:h-10 bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white
     shadow-normal rounded-full hover:bg-gray-300 dark:hover:bg-white dark:hover:text-zinc-700 transition-all cursor-pointer
+}
+
+@layer utilities{
+   .flex-center{
+      @apply flex items-center justify-center;
+   }
 }

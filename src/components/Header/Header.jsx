@@ -173,16 +173,16 @@ export default function Header() {
 
           
            {/* category-banner */}
-            <section className='category-banner mt-8 mb-10 md:my-20 '>
-              <div className='container flex justify-center gap-4'>
+            <section className='category-banner mt-8 mb-10 md:my-20  '>
+              <div className='container flex flex-wrap md:flex-nowrap justify-center gap-4'>
 
-                <div className='banner-item right relative w-[100%] xl:w-[50%]'>
+                <div className='banner-item_1 h-[200px] rounded-2xl  relative w-[100%] xl:w-[50%]'>
                   <div className=' absolute text-white right-10 top-[40%]'>
                   <h1 className='font-YekanHeavy text-3xl'>انواع قهوه</h1>
                   <p>ترکیبی و تک خاستگاه</p>
                   </div>
                </div>
-               <div className='banner-item left relative w-[100%] xl:w-[50%]'>
+               <div className='banner-item_2 h-[200px] rounded-2xl  relative w-[100%] xl:w-[50%]'>
                 <div className=' absolute text-white right-10 top-[40%]'>
                 <h1 className='font-YekanHeavy text-3xl'>پودر های فوری</h1>
                 <p>نسکافه،هات چاکلت و ماسالا</p>
@@ -237,12 +237,12 @@ export default function Header() {
       modules={[Navigation, Scrollbar, A11y]}
       ref={swiperRef}
       spaceBetween={14}
-      slidesPerView={2}
+      slidesPerView={1}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       breakpoints={{
         640: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 14,
         },
         768:{
