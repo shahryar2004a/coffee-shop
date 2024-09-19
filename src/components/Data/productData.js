@@ -1,7 +1,7 @@
 import Images from "../Images/Images"
 
 
-let data=[
+let productDB=[
     {
      id:1, 
      title:'قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی',
@@ -73,4 +73,4 @@ let data=[
 
 
 
-export default data;
+export default productDB;

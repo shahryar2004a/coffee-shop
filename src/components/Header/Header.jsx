@@ -6,15 +6,16 @@ import NavMobile from './Nav/NavMobile/NavMobile'
 import CartModalMobile from './Links/CartModal/CartModalMobile'
 import Product from './Product/Product'
 import Images from '../Images/Images'
-import data from '../Data/productData'
+import productDB from '../Data/productData'
+import Category from '../Category/Category'
+import categoryDB from '../Data/categoryData'
 
 
 
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,9 +26,10 @@ import 'swiper/css/scrollbar';
 
 export default function Header() {
 
-   const [showMenu,setShowMenu]=useState(false)
-  const  [showModalCart,setShowModalCart] = useState(false)
-     const [productData,setproductData]=useState(data)
+     const [showMenu,setShowMenu]=useState(false)
+     const  [showModalCart,setShowModalCart] = useState(false)
+     const [productData,setproductData]=useState(productDB)
+     const [categoryData,setcategoryData] = useState(categoryDB)
 
    /* slider swiper */
     const swiperRef=useRef(null)
@@ -45,7 +47,7 @@ export default function Header() {
     }
 
 
-       
+   // Modal handlers    
    const openNavMobile=()=>{
         setShowMenu(!showMenu)
         setShowModalCart(false)
@@ -197,59 +199,14 @@ export default function Header() {
            <section className='products-category mb-10 md:mb-20'>
          <div className='container'>
           <div className='flex items-center justify-center gap-y-6 gap-x-[20px] md:gap-[60px] flex-wrap'>
+            
+            {!categoryData ? (<div>Loading...</div>) : (
+                categoryData.map(category => (
+                  <Category key={category.id} category={category}/>
+                ))
+            )
 
-
-            <div className='w-25 md:w-50 text-center'>
-             <a href="#">
-             <img src={Images.category1} loading='lazy' alt="category1" />
-             </a>
-              <span className='inline-block font-YekanMedium text-sm md:text-xl
-               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
-               >قهوه دمی واسپرسو</span>
-            </div>
-
-
-            <div className='w-25 md:w-50 text-center'>
-             <a href="#">
-             <img src={Images.category2} loading='lazy' alt="category2" />
-             </a>
-              <span className='inline-block font-YekanMedium text-sm md:text-xl
-               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
-               > لوازم جانبی و تجهیزات </span>
-            </div>
-
-
-            <div className='w-25 md:w-50 text-center'>
-             <a href="#">
-             <img src={Images.category3} loading='lazy' alt="category3" />
-             </a>
-              <span className='inline-block font-YekanMedium text-sm md:text-xl
-               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
-               > اسپرسو ساز </span>
-            </div>
-
-
-            <div className='w-25 md:w-50 text-center'>
-             <a href="#">
-             <img src={Images.category4} loading='lazy' alt="category4" />
-             </a>
-              <span className='inline-block font-YekanMedium text-sm md:text-xl
-               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
-               > پک تستر قهوه</span>
-            </div>
-
-
-            <div className='w-25 md:w-50 text-center'>
-             <a href="#">
-             <img src={Images.category5} loading='lazy' alt="category5" />
-             </a>
-              <span className='inline-block font-YekanMedium text-sm md:text-xl
-               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
-               >قهوه ترک </span>
-            </div>
-
-
-
+            }
 
           </div>
          </div>
