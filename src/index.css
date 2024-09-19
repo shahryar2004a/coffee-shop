@@ -80,7 +80,7 @@
         @apply w-[95px] h-[95px] border-white/80 bg-white dark:bg-zinc-700/35
 
      }
-}
+
 
  @media screen and (min-width:1280px) {
    html.dark .products{
@@ -127,6 +127,34 @@
    @apply  flex justify-center items-center w-9 h-9 md:w-10 md:h-10 bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white
     shadow-normal rounded-full hover:bg-gray-300 dark:hover:bg-white dark:hover:text-zinc-700 transition-all cursor-pointer
 }
+
+.blog-item_1{
+   background: url("../public/images/blogs/blog-1.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.blog-item_2{
+   background: url("../public/images/blogs/blog-2.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.blog-item_3{
+   background: url("../public/images/blogs/blog-3.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.blog-item_4{
+   background: url("../public/images/blogs/blog-4.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+
+
+}
+
+
+
+}
+
 
 @layer utilities{
    .flex-center{

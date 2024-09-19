@@ -131,9 +131,9 @@ export default function Header() {
             <div className='container  pt-16 xl:pt-36'>
               {/* product section Head */}
             <div className='products-header flex justify-between'>
-             <div className='title text-zinc-700  dark:text-white'>
+             <div className='title flex flex-col text-zinc-700 gap-y-1  dark:text-white'>
                 <h1 className='font-YekanHeavy text-2xl sm:text-3xl xl:text-4xl'>جدیدترین محصولات</h1>
-                <p className='font-YekanMedium text-xs sm:text-[15px]'>فراوری شده از دانه ی قهوه</p>
+                <p className='font-YekanMedium text-xs sm:text-xl'>فراوری شده از دانه ی قهوه</p>
              </div>
              <div className='other flex items-end'>
                  <div className='flex justify-end text-orange-300'>
@@ -153,21 +153,6 @@ export default function Header() {
                }
            </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           </section>
 
 
@@ -218,11 +203,11 @@ export default function Header() {
           <div className='container'>
           {/* best selling Head */}
           <div className='products-header flex justify-between mb-16'>
-             <div className='title text-zinc-700  dark:text-white'>
+             <div className='title flex flex-col gap-y-1 text-zinc-700  dark:text-white'>
                 <h1 className='font-YekanHeavy text-2xl sm:text-3xl xl:text-4xl'>محصولات پرفروش</h1>
-                <p className='font-YekanMedium text-xs sm:text-[15px]'>پیشنهاد قهوه خورها...</p>
+                <p className='font-YekanMedium text-xs sm:text-xl'>پیشنهاد قهوه خورها...</p>
              </div>
-             <div className='flex gap-x-3 md:gap-x-[18px]'>
+             <div className='flex items-end gap-x-3 md:gap-x-[18px]'>
                <div onClick={()=>goPrev()} className=' swiper-btn'>
                   <SVG className='w-5 h-5 md:w-[26px] md:h-[26px] rotate-180' name='arrow-left-mini'/>
                 </div>
@@ -266,7 +251,7 @@ export default function Header() {
           </div>
          </section>
 
-          
+           {/* coffee-club section */} 
           <section className='coffee-club mb-8 md:mb-20'>
             <div className='container'>
             <div className='flex items-center flex-wrap lg:flex-nowrap   gap-y-7 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white py-5 px-3 lg:py-16  lg:h-36 rounded-2xl'>
@@ -282,7 +267,7 @@ export default function Header() {
               <div className='flex justify-center sm:justify-between flex-wrap sm:flex-nowrap gap-y-4 gap-x-4 sm:gap-x-0 sm:mr-30 items-center sm:w-[100%] lg:w-[50%] '>
 
 
-                <div className='flex gap-x-8  md:gap-x-5  md:w-[50%] lg:w-[60%]'>
+                <div className='flex gap-x-4 sm:gap-x-8  md:gap-x-5  md:w-[50%] lg:w-[60%]'>
 
 
                    <div className="w-[80px] h-[80px] sm:w-[72px] sm:h-[72px] md:w-[98px] md:h-[98px] text-center text-emerald-600 bg-white py-1.5 md:pt-4 md:pb-1 rounded-2xl"> 
@@ -330,6 +315,42 @@ export default function Header() {
           </section>
 
 
+
+                {/* blog */}
+               <section className='' id='product-section'>
+            
+            <div className='container'>
+              {/* blog section Head */}
+            <div className='blogs-header flex justify-between'>
+             <div className='title flex flex-col text-zinc-700 gap-y-1  dark:text-white'>
+                <h1 className='font-YekanHeavy text-2xl sm:text-3xl xl:text-4xl'> مطالب خواندنی</h1>
+             </div>
+             <div className='other flex items-end'>
+                 <div className='flex justify-end text-orange-300'>
+                  <a href="#" className='flex items-center'>
+                    <span className='text-xs sm:text-[15px]'>مشاهده همه مطالب</span>
+                    <SVG className='size-3 sm:size-4  xl:size-5' name='arrow-left-mini'/>
+                  </a>
+                 </div>
+             </div>
+           </div>   
+              {/* blog section Body */}
+           <div className=' blog-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-4 gap-4 mt-12 '>
+        
+               <div className='blog-item_1 h-[200px] rounded-2xl  relative'>
+
+               </div>
+               <div className='blog-item_2 h-[200px] rounded-2xl  relative'>
+
+               </div>
+               <div className='blog-item_3 h-[200px] rounded-2xl  relative'>
+
+               </div>
+               <div className='blog-item_4 h-[200px] rounded-2xl  relative'>
+               </div>
+           </div>
+            </div>
+             </section>
          </main>
     </>
   )
