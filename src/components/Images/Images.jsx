@@ -9,8 +9,18 @@ import p6 from '../Images/products/p6.png'
 import p7 from '../Images/products/p7.png'
 import p8 from '../Images/products/p8.png'
 
+/* category */
+
+import category1 from '../Images/categories/category1.png'
+import category2 from '../Images/categories/category2.png'
+import category3 from '../Images/categories/category3.png'
+import category4 from '../Images/categories/category4.png'
+import category5 from '../Images/categories/category5.png'
 
 
 
 
-export default {p1, p2, p3, p4, p5, p6, p7, p8}
+
+export default {p1, p2, p3, p4, p5, p6, p7, p8,
+    category1,category2,category3,category4,category5,
+}

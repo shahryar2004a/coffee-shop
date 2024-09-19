@@ -1,17 +1,47 @@
-import React,{useState} from 'react'
+import React,{useState,useRef} from 'react'
 import Nav from './Nav/Nav'
 import Links from './Links/Links'
 import SVG from '../SVG/SVG'
 import NavMobile from './Nav/NavMobile/NavMobile'
 import CartModalMobile from './Links/CartModal/CartModalMobile'
 import Product from './Product/Product'
+import Images from '../Images/Images'
+
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
 export default function Header() {
 
    const [showMenu,setShowMenu]=useState(false)
   const  [showModalCart,setShowModalCart] = useState(false)
+     
+   /* slider swiper */
+    const swiperRef=useRef(null)
+    
+    const goNext =()=>{
+      if(swiperRef.current && swiperRef.current.swiper){
+        swiperRef.current.swiper.slideNext();
+      }
+    }
 
+    const goPrev = () => {
+      if (swiperRef.current && swiperRef.current.swiper) {
+        swiperRef.current.swiper.slidePrev();
+      }
+    }
+
+
+       
    const openNavMobile=()=>{
         setShowMenu(!showMenu)
         setShowModalCart(false)
@@ -97,6 +127,7 @@ export default function Header() {
           <section className='products ' id='product-section'>
             
             <div className='container  pt-16 xl:pt-36'>
+              {/* product section Head */}
             <div className='products-header flex justify-between'>
              <div className='title text-zinc-700  dark:text-white'>
                 <h1 className='font-YekanHeavy text-2xl sm:text-3xl xl:text-4xl'>جدیدترین محصولات</h1>
@@ -111,6 +142,7 @@ export default function Header() {
                  </div>
              </div>
            </div>   
+              {/* product section Body */}
            <div className='product-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-4 gap-4 mt-12 '>
               <Product/>
               <Product/>
@@ -126,7 +158,7 @@ export default function Header() {
 
           </section>
              
-            <section className='category-banner mt-30 '>
+            <section className='category-banner mt-8 mb-10 md:my-20 '>
               <div className='container flex justify-center gap-4'>
 
                 <div className='banner-item right relative w-[100%] xl:w-[50%]'>
@@ -147,7 +179,135 @@ export default function Header() {
             
       
             </section>
+ 
 
+        <section className='products-category mb-10 md:mb-20'>
+         <div className='container'>
+          <div className='flex items-center justify-center gap-y-6 gap-x-[20px] md:gap-[60px] flex-wrap'>
+
+
+            <div className='w-25 md:w-50 text-center'>
+             <a href="#">
+             <img src={Images.category1} loading='lazy' alt="category1" />
+             </a>
+              <span className='inline-block font-YekanMedium text-sm md:text-xl
+               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
+               >قهوه دمی واسپرسو</span>
+            </div>
+
+
+            <div className='w-25 md:w-50 text-center'>
+             <a href="#">
+             <img src={Images.category2} loading='lazy' alt="category2" />
+             </a>
+              <span className='inline-block font-YekanMedium text-sm md:text-xl
+               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
+               > لوازم جانبی و تجهیزات </span>
+            </div>
+
+
+            <div className='w-25 md:w-50 text-center'>
+             <a href="#">
+             <img src={Images.category3} loading='lazy' alt="category3" />
+             </a>
+              <span className='inline-block font-YekanMedium text-sm md:text-xl
+               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
+               > اسپرسو ساز </span>
+            </div>
+
+
+            <div className='w-25 md:w-50 text-center'>
+             <a href="#">
+             <img src={Images.category4} loading='lazy' alt="category4" />
+             </a>
+              <span className='inline-block font-YekanMedium text-sm md:text-xl
+               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
+               > پک تستر قهوه</span>
+            </div>
+
+
+            <div className='w-25 md:w-50 text-center'>
+             <a href="#">
+             <img src={Images.category5} loading='lazy' alt="category5" />
+             </a>
+              <span className='inline-block font-YekanMedium text-sm md:text-xl
+               text-zinc-700 dark:text-white mt-1.5 md:mt-2.5'
+               >قهوه ترک </span>
+            </div>
+
+
+
+
+          </div>
+         </div>
+        </section>
+
+  
+
+         <section className='best-selling mb-9 md:mb-20'>
+          <div className='container'>
+          {/* best selling Head */}
+          <div className='products-header flex justify-between mb-16'>
+             <div className='title text-zinc-700  dark:text-white'>
+                <h1 className='font-YekanHeavy text-2xl sm:text-3xl xl:text-4xl'>محصولات پرفروش</h1>
+                <p className='font-YekanMedium text-xs sm:text-[15px]'>پیشنهاد قهوه خورها...</p>
+             </div>
+             <div className='flex gap-x-3 md:gap-x-[18px]'>
+               <div onClick={()=>goPrev()} className=' swiper-btn'>
+                  <SVG className='w-5 h-5 md:w-[26px] md:h-[26px] rotate-180' name='arrow-left-mini'/>
+                </div>
+               <div onClick={()=>goNext()} className=' swiper-btn '>
+                  <SVG className='w-5 h-5 md:w-[26px] md:h-[26px]' name='arrow-left-mini'/>
+                </div>
+             </div>
+           </div>   
+
+           <Swiper
+      // install Swiper modules
+      modules={[Navigation, Scrollbar, A11y]}
+      ref={swiperRef}
+      spaceBetween={14}
+      slidesPerView={2}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+      breakpoints={{
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 14,
+        },
+        768:{
+          slidesPerView:3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+      },
+      }
+    }
+    >
+      <SwiperSlide>
+        <Product/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Product/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Product/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Product/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Product/>
+      </SwiperSlide>
+      <SwiperSlide>
+      <Product/>
+      </SwiperSlide>
+    </Swiper>
+          </div>
+         </section>
          </main>
     </>
   )
