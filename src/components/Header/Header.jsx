@@ -213,7 +213,7 @@ export default function Header() {
         </section>
 
   
-
+           {/* best-selling section */}
          <section className='best-selling mb-9 md:mb-20'>
           <div className='container'>
           {/* best selling Head */}
@@ -240,7 +240,6 @@ export default function Header() {
       slidesPerView={2}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
       breakpoints={{
         640: {
           slidesPerView: 3,
@@ -257,27 +256,19 @@ export default function Header() {
       }
     }
     >
-      <SwiperSlide>
+                  {
+                  !productData ? (<div>Loading...</div>) :(
+                  productData.map((product)=>  <SwiperSlide> <Product key={product.id}  product={product}/>  </SwiperSlide>
+                  ) )
+                }
 
-      </SwiperSlide>
-      <SwiperSlide>
-
-      </SwiperSlide>
-      <SwiperSlide>
-
-      </SwiperSlide>
-      <SwiperSlide>
-
-      </SwiperSlide>
-      <SwiperSlide>
-
-      </SwiperSlide>
-      <SwiperSlide>
-
-      </SwiperSlide>
     </Swiper>
           </div>
          </section>
+
+
+
+
          </main>
     </>
   )
